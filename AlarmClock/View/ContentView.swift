@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             TabView {
-                Text("Alarm")
+                AlarmClockView()
                     .tabItem {
                         Image(systemName: "alarm")
                         Text("Alarm")
