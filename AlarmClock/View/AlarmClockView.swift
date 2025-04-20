@@ -7,9 +7,27 @@
 
 import SwiftUI
 
-struct AlarmClockView: View {
+struct AlarmView: View {
+    @EnvironmentObject var alarmModel: AlarmModel
+    @Binding var alarm: Alarm
+    
+    
     var body: some View {
-        Text("Alarm Clock")
+        Text("Hello, World!")
+    }
+}
+
+struct AlarmClockView: View {
+    @EnvironmentObject var alarmModel: AlarmModel
+    
+    var body: some View {
+        NavigationStack {
+            List {
+                ForEach(alarmModel.alarms) { alarm in
+                    
+                }
+            }
+        }
     }
 }
 
